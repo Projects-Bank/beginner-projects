@@ -1,5 +1,5 @@
 # print(15)
-# string = "hello world again!"
+# string = "hi!"
 # integer = 2
 
 # print(string + " " + str(integer))
