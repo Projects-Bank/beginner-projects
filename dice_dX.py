@@ -1,16 +1,21 @@
-# Create a roll dice function where we can choose the
-# number of sides of the dice
+import random
 
-
+5
 #Roll dice function
-# def roll_dice(NUMBER_OF_SIDES):
-#     dice_value = random.randint(1, 6)
-#     print('Rolling the dice...')
-#     print(f'You got a {dice_value}')
-#     answer = input("Do you want to play again? [yes/no]")
-#     roll_again(answer)
+def roll_dice(number_of_sides):
+    dice_value = random.randint(1, number_of_sides)
+    print(f"You got a {dice_value}!")
 
-# Input to ask the number of sides
+    create_dice()
 
 
-# Call roll dice function
+def create_dice():
+    number_of_sides = int(input("how many sides your dice has? "))
+    if (number_of_sides <= 1) or (number_of_sides > 5000):
+        print("The number of sides has to be between 1 and 5000")
+        create_dice()
+    else:
+        roll_dice(number_of_sides)
+
+
+create_dice()
